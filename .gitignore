@@ -1,0 +1,11 @@
+# Ignore virtual environment
+
+env 
+.venv 
+venv 
+.env 
+
+
+# Ignore calificaciones 
+
+calificaciones_sucias.csv
