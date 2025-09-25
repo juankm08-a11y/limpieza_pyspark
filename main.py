@@ -3,7 +3,7 @@ from pyspark.sql.functions import col, when, avg, sum as spark_sum, count
 
 spark = SparkSession.builder.appName("LimpiezaConcesionario").getOrCreate()
 
-df = spark.read.option("header", True).option("inferSchema", True).csv("calificaciones_sucias.csv")
+df = spark.read.option("header", True).option("inferSchema", True).csv("csv/concesionario_limpio.csv/part-00000-56c4fd3b-c26c-4f81-a4be-7731a05798fe-c000.csv")
 
 df = df.withColumn("marca", when(col("marca") == "totyot", "toyota").otherwise(col("marca")))
 
