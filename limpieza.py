@@ -1,17 +1,16 @@
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import col, trim,upper
-import os
-import shutil 
+
 
 # 1. Creamos la sesion de Spark
 spark = SparkSession.builder \
-    .appName("ETL_Ventas_limpieza") \
+    .appName("ETL_Concesinario") \
         .master("local[*]") \
             .getOrCreate()
             
 
 # 2. Leemos el archivo sucio
-df = spark.read.csv("calificaciones_sucias.csv",header=True,inferSchema=True)
+df = spark.read.csv("concesinario_sucio.csv",header=True,inferSchema=True)
 
 # 3. Mostramos los datos originales
 print("---- DATOS ORIGINALES: ------")
