@@ -6,4 +6,4 @@ venv
 .env 
 
 
-*.csv
+/calificaciones_sucias.csv
