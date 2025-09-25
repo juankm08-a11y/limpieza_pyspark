@@ -6,6 +6,4 @@ venv
 .env 
 
 
-# Ignore calificaciones 
-
-calificaciones_sucias.csv
+*.csv
